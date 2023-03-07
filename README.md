@@ -16,3 +16,23 @@ ModifierパネルからGeometryNodesプロパティを編集することでVCF�
 |LouverSize|VCFの１辺の長さ|
 |Slit Spacing|ルーバーの間隔|
 |RotationOffset|VCFの回転|
+
+![Alt text](img/ViewAngleLouverAngle.jpg)
+
+## 仕様
+
+GeometryNodesの機能を用いて、`VCF_Maker`というノードグループを実装しています。
+
+![Alt VCF_Maker](img/VCF_Maker.png)
+
+| Inputs | Outputs |
+| --- | --- |
+| ViewAngle (float) | LouverHeight (float) |
+| LouverAngle (float)| |
+| LouverSize (float)| |
+| Slit Spacing (float)| |
+| RotationOffset (Vector3)| |
+
+`LouverHeight`出力では、ルーバーの高さを取得できます。これから値を取得し、VCFを２枚ぴったりと重ねるといった使い方ができます。使用例を`LayeredVCF`オブジェクトとして同梱しています。
+
+![Alt text](img/LouverHeight.png)
