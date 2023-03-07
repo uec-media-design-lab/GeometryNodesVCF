@@ -1,7 +1,7 @@
 # GeometryNodesVCF
 ![Alt GNVCF](img/GNVCF.png)
 
-先行のVCF生成モジュール(https://github.com/uec-media-design-lab/MMAPs_Module)をGeometryNodesで実装し、リアルタイムでVCF設定を変更できるBlenderファイルです。
+先行のVCF生成モジュール( https://github.com/uec-media-design-lab/MMAPs_Module )をGeometryNodesで実装し、リアルタイムでVCF設定を変更できるBlenderファイルです。
 
 ## 使い方
 
