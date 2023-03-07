@@ -33,6 +33,18 @@ GeometryNodesの機能を用いて、`VCF_Maker`というノードグループ�
 | Slit Spacing (float)| |
 | RotationOffset (Vector3)| |
 
+このGeometryNodesを、Scaleが1*1のPlaneに適用することでVCFが生成されます。元のGeometryを`VCFElementPlane`として同梱しています。
+![Alt text](img/VCFElementPlane.png)
+
 `LouverHeight`出力では、ルーバーの高さを取得できます。これから値を取得し、VCFを２枚ぴったりと重ねるといった使い方ができます。使用例を`LayeredVCF`オブジェクトとして同梱しています。
 
 ![Alt text](img/LouverHeight.png)
+
+## Python Scriptによる制御
+
+Python ScriptからVCFのパラメータを制御する場合は、次のようにしてください。Blender3.1時点では、Geometry Nodesのパラメータ名は内部的に`Input_5`のような規則になっています。
+
+```
+bpy.data.objects["VCF"].modifiers["VCF_Maker"]["Input_3"] = 24.39
+```
+![Alt text](img/Script.png)
