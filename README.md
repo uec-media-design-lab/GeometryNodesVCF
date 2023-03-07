@@ -42,7 +42,7 @@ GeometryNodesの機能を用いて、`VCF_Maker`というノードグループ�
 
 ## Python Scriptによる制御
 
-Python ScriptからVCFのパラメータを制御する場合は、次のようにしてください。Blender3.1時点では、Geometry Nodesのパラメータ名は内部的に`Input_5`のような規則になっています。
+Python ScriptからVCFのパラメータを制御する場合は、次のようにしてください。Blender3.1時点では、Geometry Nodesのパラメータ名は内部的に`Input_5`のような規則になっています。マウスオーバーすることで内部名を参照してください。
 
 ```
 bpy.data.objects["VCF"].modifiers["VCF_Maker"]["Input_3"] = 24.39
