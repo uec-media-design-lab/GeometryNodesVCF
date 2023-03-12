@@ -33,12 +33,22 @@ GeometryNodesの機能を用いて、`VCF_Maker`というノードグループ�
 | Slit Spacing (float)| |
 | RotationOffset (Vector3)| |
 
-このGeometryNodesを、Scaleが1*1のPlaneに適用することでVCFが生成されます。元のGeometryを`VCFElementPlane`として同梱しています。
+このGeometryNodesを、VCFElementPlaneに適用することでVCFが生成されます。元のGeometryを`VCFElementPlane`として同梱しています。
 ![Alt text](img/VCFElementPlane.png)
 
 `LouverHeight`出力では、ルーバーの高さを取得できます。これから値を取得し、VCFを２枚ぴったりと重ねるといった使い方ができます。使用例を`LayeredVCF`オブジェクトとして同梱しています。
 
 ![Alt text](img/LouverHeight.png)
+
+## VCFElementPlaneの作成方法
+通常のPlaneとVCFElementPlaneは異なるので、以下の手順で作成してください。
+
+1. Planeを作成
+2. Planeをx軸方向に90°回転
+3. PlaneのScaleを0.5に設定
+4. トランスフォームを適用する(Apply All Transform)
+
+
 
 ## Python Scriptによる制御
 
