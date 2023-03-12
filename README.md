@@ -41,12 +41,12 @@ GeometryNodesの機能を用いて、`VCF_Maker`というノードグループ�
 ![Alt text](img/LouverHeight.png)
 
 ## VCFElementPlaneの作成方法
-通常のPlaneとVCFElementPlaneは異なるので、以下の手順で作成してください。
+    通常のPlaneとVCFElementPlaneは異なるので、以下の手順で作成してください。
 
-1. Planeを作成
-2. Planeをx軸方向に90°回転
-3. PlaneのScaleを0.5に設定
-4. トランスフォームを適用する(Apply All Transform)
+    1. Planeを作成
+    2. Planeをx軸方向に90°回転
+    3. PlaneのScaleを0.5に設定
+    4. トランスフォームを適用する(Apply All Transform)
 
 
 
@@ -57,4 +57,19 @@ Python ScriptからVCFのパラメータを制御する場合は、次のよう�
 ```
 bpy.data.objects["VCF"].modifiers["VCF_Maker"]["Input_3"] = 24.39
 ```
+
 ![Alt text](img/Script.png)
+
+## 本VCFの性能値
+
+    VCFを通過する光線の透過率を調べるコードを作成しました。
+
+1. Blender内のScriptタブから`PerformanceTest`スクリプトを実行
+    ![Alt text](img/Scripting.png)
+2. 付属の`MakeVCFPerfomanceGraph.py`を実行
+    ```
+    python MakeVCFPerformanceGraph.py
+    ```
+
+    デフォルトの実行結果は以下です。適宜必要なパラメータを書き換えてグラフを作成してください。
+    ![Alt text](ResultFigure/CompareWithShinEtsuVCF.png)
